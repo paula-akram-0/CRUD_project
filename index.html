@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="text-center text-uppercase">cruds project</h1>
+    <div class="container">
+    <label for="NameProductInput">name-prodect</label>
+    <input type="text" onkeyup="validationName()"  id="NameProductInput" class="form-control  border-primary">
+    <span id="text1" class="py-2"></span>
+    <label for="PriceProductInput">price-prodect</label>
+    <input type="number" onkeyup="validationPrice()"  id="PriceProductInput" class="form-control  border-primary">
+    <span id="text2" class="py-2"></span>
+    <label for="categoryProductInput">category-project</label>
+    <select class="form-control  border-primary"  id="categoryProductInput">
+        <option>phone</option>
+        <option>TV</option>
+        <option>labtop</option>
+    </select>
+    <label for="descProductInput">description</label>
+    <textarea class="form-control  border-primary"  id="descProductInput" cols="30" rows="10"></textarea>
+    <button class="btn btn-info mt-3" id ="submit" onclick="addproduct()">add product</button>
+    <button class="btn btn-outline-danger mt-3" onclick="clearinput()">clear area</button>
+    <span id="error" class="py-2 te"></span>
+</div>
+
+
+<input type="search" onkeyup="searchproduct()" class="form-control w-50 m-auto my-5  border-danger" placeholder="search in product ....." id="searchInput">
+
+<table class="table my-5">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">name-prodect</th>
+        <th scope="col">price-prodect</th>
+        <th scope="col">category-project</th>
+        <th scope="col">description</th>
+        <th scope="col">update</th>
+        <th scope="col">delete</th>
+      </tr>
+    </thead>
+    <tbody id="showproduct">
+      
+    </tbody>
+  </table>
+
+
+
+
+
+
+
+    <script src="main.js"></script>
+</body>
+</html>
